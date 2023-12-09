@@ -1,0 +1,44 @@
+this is my josn data in resume format 
+
+  {
+  "name": "Nagaraj",
+  "age": 23,
+  "occupation": "Web Developer",
+  "skills": ["JavaScript", "HTML", "CSS", "React","python","php","django"],
+  "experience": [
+    {
+      "position": "Frontend Developer",
+      "company": "TechCo",
+      "year": 2020
+    },
+    {
+      "position": "UI/UX Designer",
+      "company": "DesignHub",
+      "year": 2018
+    }
+  ]
+}
+
+1. for loop
+
+  for (let i = 0; i < resume.skills.length; i++) {
+  console.log(resume.skills[i]);
+}
+
+2. for in loop
+
+  for (let key in resume) {
+  console.log(`${key}: ${resume[key]}`);
+}
+
+3. for of loop
+
+  for (let skill of resume.skills) {
+  console.log(skill);
+}
+
+4. for each loop
+
+  resume.skills.forEach(skill => {
+  console.log(skill);
+});
