@@ -1,0 +1,66 @@
+1.Difference between HTTP1.1 vs HTTP2
+
+Introduction:
+The World Wide Web has come a long way since its inception, and the protocols governing its functioning have evolved to meet the ever-increasing demands for speed, efficiency, and security. Two prominent players in this evolution are HTTP/1.1 and its successor, HTTP/2. In this blog, we'll delve into the key differences between these two HTTP protocols.
+
+1. Multiplexing:
+   - HTTP/1.1: In the older version, each request/response connection required a separate connection, leading to potential bottlenecks and delays.
+   - HTTP/2: One of the groundbreaking features of HTTP/2 is multiplexing, allowing multiple streams of data to be sent and received in parallel over a single connection. This significantly improves efficiency and reduces latency.
+
+2. Header Compression:
+   - HTTP/1.1: Headers, containing important information about the request and response, are sent in plaintext, leading to increased overhead and longer load times.
+   - HTTP/2: Introduces header compression, where headers are efficiently compressed, reducing the amount of data transferred and speeding up the communication between the client and server.
+
+3. Binary Protocol:
+   - HTTP/1.1: Uses a text-based format, which is human-readable but not the most efficient for machines.
+   - HTTP/2: Embraces a binary protocol, making it more compact and faster to parse for both servers and clients. While it may not be as human-readable, the performance gains are significant.
+
+4. Resource Prioritization:
+   - HTTP/1.1: Resources are requested and delivered in the order they appear in the HTML document, leading to potential delays for critical resources.
+   - HTTP/2: Introduces the ability to prioritize resources, allowing the server to send more critical assets first, ensuring a faster and more efficient loading of web pages.
+
+5. Server Push:
+   - HTTP/1.1: Lacks the ability for the server to push resources to the client without explicit requests.
+   - HTTP/2: Supports server push, enabling the server to anticipate and push essential resources to the client before they are requested. This further optimizes page loading times.
+
+6. Connection Handling:
+   - HTTP/1.1: Requires multiple connections to load resources in parallel, leading to increased latency.
+   - HTTP/2: With multiplexing, a single connection can handle multiple concurrent requests and responses, reducing the need for multiple connections and improving overall efficiency.
+
+Conclusion:
+While HTTP/1.1 has been the workhorse of the web for many years, HTTP/2 brings a new era of efficiency and speed. The transition from the text-based, sequential nature of HTTP/1.1 to the binary, multiplexed, and prioritized world of HTTP/2 represents a significant leap forward in the quest for a faster and more responsive web. As technology continues to evolve, so too will the protocols that underpin our online experiences.
+
+2. objects and its internal representation in Javascript
+
+Introduction:
+JavaScript, the language of the web, is renowned for its flexibility and ease of use. At the core of its versatility lies the concept of objects—a fundamental building block in JavaScript programming. In this blog, we'll explore the internal representation of objects in JavaScript, shedding light on how they are structured and manipulated.
+
+1. Objects: The Bedrock of JavaScript:
+   - In JavaScript, objects are dynamic, mutable data structures used to store and organize data. They play a pivotal role in representing real-world entities and their relationships in code.
+
+2. Key-Value Pairs:
+   - At the heart of every JavaScript object is its collection of key-value pairs. This allows developers to associate properties (keys) with values, creating a structured and accessible data model.
+
+3. Object Properties and Methods:
+   - Properties can be any valid JavaScript data type, including numbers, strings, functions, and even other objects. This flexibility makes objects a powerful and versatile tool for developers.
+
+4. Object Literal Notation:
+   - Objects can be defined using literal notation, where properties and values are enclosed within curly braces. This concise syntax is a preferred way of creating objects in many JavaScript applications.
+
+5. Prototypes and Inheritance:
+   - JavaScript follows a prototype-based model of inheritance. Objects can inherit properties and methods from other objects through their prototype chain. This mechanism allows for code reuse and the creation of hierarchies in object-oriented programming.
+
+6. The Object Prototype:
+   - Every object in JavaScript is linked to a prototype object. The prototype serves as a template, providing shared properties and methods that the object can access. This prototype chain continues until the final link, the `Object` prototype.
+
+7. Object Internal Representation:
+   - Internally, JavaScript engines implement objects using various data structures. While the specifics may vary between engines, objects often include a hidden class or structure that defines their shape. This internal representation allows for efficient memory management and optimization.
+
+8. Object Manipulation:
+   - Developers can manipulate objects dynamically by adding, modifying, or deleting properties. This flexibility is crucial for adapting to changing requirements during the course of program execution.
+
+9. Object Cloning and Copying:
+   - Copying objects in JavaScript involves considerations of shallow and deep copying. Shallow copies duplicate the object structure, but not nested objects. Deep copies, on the other hand, replicate the entire object hierarchy.
+
+Conclusion:
+Understanding the internal representation of objects in JavaScript is essential for harnessing the full power of the language. Objects provide a means to structure and organize data in a way that aligns with real-world entities, making JavaScript a versatile and expressive language for web development. As you continue your journey in JavaScript, a deeper comprehension of objects and their internal workings will undoubtedly enhance your coding prowess.
