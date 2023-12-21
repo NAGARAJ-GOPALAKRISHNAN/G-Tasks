@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //task 1 
+        // how to compare the two json have the same properties without order?
+        // a. let obj1={name:"Person1", age:5}
+        // b. let obj2={age:5,name:"Person1"}
+
+        let obj1 = {name:"Person1", age:5};
+        let obj2 = {age:5, name:"Person1"};
+
+        if (JSON.stringify(obj1)===JSON.stringify(obj2)){
+          console.log("same properties");
+        }
+        else{
+          console.log("different properties");
+        }
+
+
+    // task 2
+    // display all the countries flag in console 
+
+    fetch("https://restcountries.com/v3.1/all")
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(country => {
+          const flag = country.flags.svg; 
+          if (flag) {
+            console.log(`Country: ${country.name.common}, Flag: ${flag}`);
+          } else {
+            console.log(`Country: ${country.name.common}, Flag not available`);
+          }
+        });
+      })
+      .catch(error => console.error("Error fetching data:", error));
+
+
+    // task 3
+    // user the same rest countries and print all countries names,regions,sub-region and populations
+
+    fetch("https://restcountries.com/v3.1/all").then(response => response.json()).then(data => {
+      data.forEach(country => {
+          console.log(`Country: ${country.name.common},regions: ${country.region},sub-region: ${country.subregion},Population: ${country.population}`);
+      })
+        
+    ;});
+    </script>
+</body>
+</html>
